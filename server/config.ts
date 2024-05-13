@@ -1,6 +1,6 @@
-
 import 'dotenv/config'
 
+export const DB_HOST = process.env.DB_HOST;
 export const DB_DEV_NAME =<string>process.env.DB_DEV_NAME;
 export const DB_TEST_NAME = <string>process.env.DB_TEST_NAME;
 export const DB_USERNAME = process.env.DB_USERNAME;

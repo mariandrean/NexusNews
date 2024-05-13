@@ -1,8 +1,9 @@
 import axios from "axios";
+const URLAPI_USERS = "https://nexusnews-iemj.onrender.com/api/users/"
 
 export const login = async (email, password) => {
     try {
-        const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
+        const response = await axios.post(`${URLAPI_USERS + "login"}`, { email, password });
         return response.data;
     } catch (error) {
         console.error('Error al iniciar sesión:', error);
@@ -12,7 +13,7 @@ export const login = async (email, password) => {
 
 export const register = async (email, password, confirmPassword) => {
     try {
-        const response = await axios.post('http://localhost:3000/api/users/register', { email, password, confirmPassword });
+        const response = await axios.post(`${URLAPI_USERS + "register"}`, { email, password, confirmPassword });
         console.log(response)
         return response.data;
     } catch (error) {

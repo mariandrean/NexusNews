@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URLAPI_NEWS = 'http://localhost:3000/api/news/';
+const URLAPI_NEWS = 'https://nexusnews-iemj.onrender.com/api/news/';
 const token = localStorage.getItem('token');
 const headers = { 'Authorization': `Bearer ${token}` }
 

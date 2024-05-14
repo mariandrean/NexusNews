@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getOneNews, deleteNews } from '../services/newsServices';
 import { useParams, useNavigate, Navigate } from "react-router-dom";
 import "../pages/News.css"
+import Share from '../components/Share';
 
 const News = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const News = () => {
           <div className='image-news'><img src={data.image} alt='img-news' className='image' /></div>
           <div className='date'><span className='strong'></span>{data.date.slice(0, 10)}</div>
           <h3 className='body-news'><span className='body'>{data.body}</span></h3>
+          <Share description={news.title} imageUrl={news.image} />
         </article>
 
       </div>
